@@ -1,102 +1,168 @@
-<<<<<<< HEAD
-# PokeAPI
-=======
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Leany PokéAPI - Backend NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Bem-vindo ao desafio técnico para a vaga de **Desenvolvedor Backend Júnior na Leany**!  
+Este projeto consiste em uma **API RESTful** construída com **NestJS**, integrando-se à **PokéAPI** para gerenciamento de times de Pokémon criados por treinadores.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+## 🔗 Link do Swagger
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Acesse a documentação completa da API em:
 
-## Project setup
 
-```bash
-$ npm install
-```
 
-## Compile and run the project
+[http://localhost:3000/api](http://localhost:3000/api)
+
+
+---
+
+## 📌 Tecnologias
+
+- [NestJS](https://nestjs.com/) (Framework principal)
+- [TypeORM](https://typeorm.io/) (ORM)
+- [PostgreSQL](https://www.postgresql.org/) (Banco de dados relacional)
+- [Docker](https://www.docker.com/)
+- [PokéAPI](https://pokeapi.co/) (Integração externa)
+- [Swagger/OpenAPI](https://swagger.io/)
+
+---
+
+## 📦 Instalação
+
+### 1. Clone o repositório
 
 ```bash
-# development
-$ npm run start
+git clone https://github.com/seu-usuario/leany-poke-api.git
+cd leany-poke-api
+````
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
+### 2. Instale as dependências
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm install
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 3. Suba o banco de dados com Docker
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+docker-compose up -d
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 4. Configure o `.env`
 
-## Resources
+Crie um arquivo `.env` na raiz com:
 
-Check out a few resources that may come in handy when working with NestJS:
+```env
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
+DB_NAME=leany_poke_db
+PORT=3000
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+> Altere conforme seu ambiente local, caso necessário.
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## ▶️ Executando a aplicação
 
-## Stay in touch
+```bash
+npm run start
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 📘 Endpoints principais
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
->>>>>>> master
+### 🔹 Treinadores (`/trainers`)
+
+* `POST /trainers` → Cria um novo treinador
+* `GET /trainers` → Lista todos os treinadores
+* `GET /trainers/:id` → Busca treinador por ID
+* `PUT /trainers/:id` → Atualiza treinador
+* `DELETE /trainers/:id` → Deleta treinador
+
+### 🔹 Times (`/teams`)
+
+* `POST /teams` → Cria um time vinculado a um treinador
+* `GET /teams` → Lista todos os times
+* `GET /teams/:id` → Detalha um time específico
+* `GET /teams/trainer/:trainerId` → Lista todos os times de um treinador
+* `DELETE /teams/:id` → Remove um time
+
+### 🔹 Pokémon nos Times (`/teams/:teamId/pokemons`)
+
+* `POST` → Adiciona um Pokémon (usando ID ou nome da PokéAPI)
+* `GET` → Lista Pokémons de um time (enriquecido com nome, tipo, imagem da PokéAPI)
+* `DELETE /teams/:teamId/pokemons/:id` → Remove um Pokémon do time
+
+---
+
+## 🧠 Decisões de Arquitetura
+
+* **Camadas separadas**: Controllers, Services, DTOs e Entidades isolados.
+* **Validações**: Usando `class-validator` em todos os DTOs.
+* **Integração com PokéAPI**: Implementada via `PokeapiService`, que valida e enriquece os dados.
+* **Relacionamentos**:
+
+  * 1\:N → Treinador → Times
+  * N\:N (implícita) → Time ↔ Pokémons da PokéAPI
+
+---
+
+## 📂 Estrutura de Diretórios
+
+```
+src/
+├── trainers/
+├── teams/
+├── team-pokemons/
+├── pokeapi/
+├── common/
+└── main.ts
+```
+
+---
+
+## 🧪 Melhorias futuras (não obrigatórias)
+
+* Paginação e filtros nos endpoints
+* Testes unitários e e2e (Playwright / Jest)
+* Autenticação com JWT
+* Cache para chamadas à PokéAPI
+
+---
+
+## 📝 Autor
+
+Desenvolvido por **Adriano Vale** para o desafio técnico da Leany.
+[GitHub](https://github.com/ValeAdriano)
+
+---
+
+## 🛠 Comandos úteis
+
+```bash
+# Criar entidade + módulo + serviço + controller com CLI Nest
+nest g resource trainers
+nest g resource teams
+nest g resource team-pokemons
+
+# Gerar migrations com TypeORM
+npm run typeorm:generate -- -n NomeDaMigration
+npm run typeorm:run
+```
+
+---
+
+## 📄 Licença
+
+MIT
+
+```
+
+---
+
+Se quiser, posso personalizar o conteúdo com base em detalhes do seu repositório público. Deseja que eu adicione os links reais do GitHub?
+```
