@@ -1,0 +1,12 @@
+
+services:
+  db:
+    image: postgres
+    container_name: leany_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: leany
+    ports:
+      - '5432:5432'
